@@ -3,6 +3,7 @@ import Card from './Card';
 import Pokeball from './Pokeball';
 import PokeballHeader from './PokeballHeader';
 import './App.css';
+import styled from 'styled-components/macro';
 
 function App() {
   const initialPokemon = [
@@ -38,7 +39,7 @@ function App() {
   }
   return (
     <div>
-      <h1>Pokemon App</h1>
+      <Headline>Pokemon App</Headline>
       <section>
         <PokeballHeader count={pokedex.length} />
         <div className="flexbox">
@@ -63,3 +64,7 @@ function App() {
 }
 
 export default App;
+
+const Headline = styled.h1`
+  color: hotpink;
+`;
